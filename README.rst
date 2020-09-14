@@ -2,6 +2,7 @@ Python bindings to the ConoHaDNS API (based on Designate API)
 =====================================
 
 Original is OpenStack DNS service client based on Designate API
+
 .. image:: https://img.shields.io/pypi/v/python-designateclient.svg
     :target: https://pypi.python.org/pypi/python-designateclient/
     :alt: Latest Version
