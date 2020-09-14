@@ -1,0 +1,33 @@
+diff -uNr designateclient/resources/schemas/v1/domain.json mac-py27-venv-designateclient/resources/schemas/v1/domain.json
+--- designateclient/resources/schemas/v1/domain.json	2020-05-26 14:57:00.000000000 +0900
++++ mac-py27-venv-designateclient/resources/schemas/v1/domain.json	2020-05-26 11:24:12.000000000 +0900
+@@ -35,6 +35,12 @@
+             "minimum": 1,
+             "maximum": 2147483647
+         },
++        "gslb": {
++            "type": "integer",
++            "description": "gslb bool flag",
++            "minimum": 0,
++            "maximum": 1
++        },
+         "serial": {
+             "type": "integer",
+             "description": "Serial Number",
+diff -uNr designateclient/resources/schemas/v1/server.json mac-py27-venv-designateclient/resources/schemas/v1/server.json
+--- designateclient/resources/schemas/v1/server.json	2020-05-26 14:57:00.000000000 +0900
++++ mac-py27-venv-designateclient/resources/schemas/v1/server.json	2020-05-26 12:04:06.000000000 +0900
+@@ -21,6 +21,13 @@
+             "maxLength": 255,
+             "required": true
+         },
++        "brand": {
++            "type": "string",
++            "description": "DNS service brand name",
++            "pattern": "^[0-9a-zA-Z]+$",
++            "maxLength": 63,
++            "required": true
++        },
+         "created_at": {
+             "type": "string",
+             "description": "Date and time of server creation",
